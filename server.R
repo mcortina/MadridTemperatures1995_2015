@@ -110,17 +110,17 @@ function(input, output) {
     p
     })
 
-  output$slopeMin <- renderText({
-    coef_min = coef(lm(avgTempMinMonthly ~ year_num, data = selectedData2()))
-    paste ("Minimun temperature slope:", format(coef_min[2], digits=3) )
-  })
-  output$slopeAvg <- renderText({
-    coef_avg = coef(lm(avgTempMonthly ~ year_num, data = selectedData2()))
-    paste ("Maximum average slope:", format(coef_avg[2], digits=3) )
-  })
   output$slopeMax <- renderText({
     coef_max = coef(lm(avgTempMaxMonthly ~ year_num, data = selectedData2()))
     paste ("Maximum temperature slope:", format(coef_max[2], digits=3) )
+  })
+  output$slopeAvg <- renderText({
+    coef_avg = coef(lm(avgTempMonthly ~ year_num, data = selectedData2()))
+    paste ("Average temperature slope:", format(coef_avg[2], digits=3) )
+  })
+  output$slopeMin <- renderText({
+    coef_min = coef(lm(avgTempMinMonthly ~ year_num, data = selectedData2()))
+    paste ("Minimun temperature slope:", format(coef_min[2], digits=3) )
   })
 
 }
