@@ -62,11 +62,11 @@ fluidPage(
            column(8, plotOutput("plot4", "auto", height="550")),
            fluidRow(
               column(2,  hr()),
-              column(2,  textOutput("slopeMin")),
+              column(2,  textOutput("slopeMax")),
               column(2,  hr()),
               column(2,  textOutput("slopeAvg")),
               column(2,  hr()),
-              column(2,  textOutput("slopeMax"))
+              column(2,  textOutput("slopeMin"))
               )
            )
   )
